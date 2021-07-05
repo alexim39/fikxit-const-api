@@ -35,7 +35,7 @@ app.post('/api/subscription', (req, res) => {
     
     const mailOptions = {
         from: 'Fikxit Server <noreply@fikxit.com>',
-        to: 'ago.fnc@gmail.com',
+        to: 'fikxit.info@gmail.com',
         subject: 'FikxIT Subscripton Message',
         html: `Hi, <br>
         Please not that someone with email ${req.body.email} just subscribed to Fikxit website`
@@ -55,7 +55,7 @@ app.post('/api/request', (req, res) => {
 
     const mailOptions = {
         from: 'Fikxit Server <noreply@fikxit.com>',
-        to: 'ago.fnc@gmail.com',
+        to: 'fikxit.info@gmail.com',
         subject: 'FikxIT Request Message',
         html: `Hi, <br>
         Please not that someone with details as below just made a request at Fikxit website: <br>
@@ -64,6 +64,7 @@ app.post('/api/request', (req, res) => {
         Email address: ${req.body.email}, <br>
         Request subject: ${req.body.subject}, <br>
         Request descripton: ${req.body.msg} <br>
+        Request Address: ${req.body.address} <br>
         `
     };
 
